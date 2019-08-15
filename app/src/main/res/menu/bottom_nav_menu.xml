@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/idprofil"
+        android:icon="@drawable/ic_face_black_24dp"
+        android:title="Profil" />
+    <item
+        android:id="@+id/idkontak"
+        android:icon="@drawable/ic_contact_phone_black_24dp"
+        android:title="Kontak" />
+    <item
+        android:id="@+id/idteman"
+        android:icon="@drawable/ic_group_black_24dp"
+        android:title="Teman" />
+</menu>
