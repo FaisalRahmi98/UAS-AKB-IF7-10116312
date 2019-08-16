@@ -58,5 +58,6 @@ public class MasukActivity extends AppCompatActivity {
     public void openDaftar(View view) {
         Intent intent = new Intent(MasukActivity.this, DaftarActivity.class);
         startActivity(intent);
+        finish();
     }
 }

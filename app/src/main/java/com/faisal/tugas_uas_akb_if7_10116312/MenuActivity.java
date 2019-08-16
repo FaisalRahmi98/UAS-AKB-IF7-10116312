@@ -29,28 +29,6 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        /*
-
-
-
-
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String st = "off";
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(DaftarActivity.StatusLogin, st);
-                editor.commit();
-
-                Intent intent = new Intent(MenuActivity.this, MasukActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        */
-
 
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
 
@@ -100,12 +78,10 @@ public class MenuActivity extends AppCompatActivity {
     public void openTambah(View view) {
         Intent intent = new Intent(MenuActivity.this, TambahTemanActivity.class);
         startActivity(intent);
-        finish();
     }
     public void openTampil(View view) {
-        /*Intent intent = new Intent(MenuActivity.this, TampilTemanActivity.class);
+        Intent intent = new Intent(MenuActivity.this, TampilTemanActivity.class);
         startActivity(intent);
-        finish();*/
     }
     public void openEmail(View view) {
         String url = "mailto:rahmi.faisal@gmail.com";

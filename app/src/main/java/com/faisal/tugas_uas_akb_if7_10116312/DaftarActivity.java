@@ -63,7 +63,8 @@ public class DaftarActivity extends AppCompatActivity {
 
                         Toast.makeText(DaftarActivity.this, "Pendaftaran Berhasil", Toast.LENGTH_LONG).show();
 
-                        onBackPressed();
+                        Intent intent = new Intent(DaftarActivity.this, MasukActivity.class);
+                        startActivity(intent);
                     }
                 }
             }
@@ -73,5 +74,6 @@ public class DaftarActivity extends AppCompatActivity {
     public void openMasuk(View view) {
         Intent intent = new Intent(DaftarActivity.this, MasukActivity.class);
         startActivity(intent);
+        finish();
     }
 }
