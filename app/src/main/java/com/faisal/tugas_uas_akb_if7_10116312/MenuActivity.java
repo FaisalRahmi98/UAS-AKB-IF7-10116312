@@ -13,13 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
 
     SharedPreferences sharedpreferences;
     Button button;
-    TextView text1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +28,11 @@ public class MenuActivity extends AppCompatActivity {
 
 
         /*
-        text1 = (TextView) findViewById(R.id.textView13);
 
-        button = (Button) findViewById(R.id.button2);
-        sharedpreferences = getSharedPreferences(DaftarActivity.MyFREFERENCES, Context.MODE_PRIVATE);
-        String tempUser = sharedpreferences.getString(DaftarActivity.Username, "Username");
 
-        text1.setText(tempUser);
+
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +47,8 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         */
+
 
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
 
@@ -83,5 +81,17 @@ public class MenuActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    public void keluar(View view) {
+        sharedpreferences = getSharedPreferences(DaftarActivity.MyFREFERENCES, Context.MODE_PRIVATE);
+        String st = "off";
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(DaftarActivity.StatusLogin, st);
+        editor.commit();
+
+        Intent intent = new Intent(MenuActivity.this, MasukActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

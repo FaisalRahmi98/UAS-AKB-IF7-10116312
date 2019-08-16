@@ -22,12 +22,8 @@ public class MasukActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.button);
         sharedpreferences = getSharedPreferences(DaftarActivity.MyFREFERENCES, Context.MODE_PRIVATE);
-        String tempStatus = sharedpreferences.getString(DaftarActivity.StatusLogin, "Status");
 
-        if(tempStatus.equals("on")){
-            Intent intent = new Intent(MasukActivity.this, MenuActivity.class);
-            startActivity(intent);
-        }
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
