@@ -94,4 +94,15 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void openTambah(View view) {
+        Intent intent = new Intent(MenuActivity.this, TambahTemanActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openTampil(View view) {
+        /*Intent intent = new Intent(MenuActivity.this, TampilTemanActivity.class);
+        startActivity(intent);
+        finish();*/
+    }
 }
