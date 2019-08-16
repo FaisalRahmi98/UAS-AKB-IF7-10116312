@@ -1,8 +1,10 @@
+//15-08-2019, 10116312, Faisal Rahmi, AKB-7/IF-7
 package com.faisal.tugas_uas_akb_if7_10116312;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -104,5 +106,23 @@ public class MenuActivity extends AppCompatActivity {
         /*Intent intent = new Intent(MenuActivity.this, TampilTemanActivity.class);
         startActivity(intent);
         finish();*/
+    }
+    public void openEmail(View view) {
+        String url = "mailto:rahmi.faisal@gmail.com";
+        Intent email = new Intent(Intent.ACTION_VIEW);
+        email.setData(Uri.parse(url));
+        startActivity(email);
+    }
+    public void openTelp(View view) {
+        String nomor = "083823516946";
+        Intent panggil = new Intent(Intent.ACTION_DIAL);
+        panggil.setData(Uri.fromParts("tel", nomor, null));
+        startActivity(panggil);
+    }
+    public void openIg(View view) {
+        String url = "https://www.instagram.com/faisal.rahmi/";
+        Intent ig = new Intent(Intent.ACTION_VIEW);
+        ig.setData(Uri.parse(url));
+        startActivity(ig);
     }
 }
